@@ -5,101 +5,66 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<link rel="stylesheet" href="assets/fontawesome/css/brands.min.css"/>
+        <link rel="stylesheet" href="assets/fontawesome/css/solid.min.css"/>
+		<link rel="stylesheet" href="assets/fontawesome/css/light.min.css"/>
+        <link rel="stylesheet" href="assets/fontawesome/css/fontawesome.min.css"/>
+		<script src="assets/js/main.js"></script>
 	</head>
-	<body class="is-preload">
-			<div id="page-wrapper">
-					<div id="wrapper">
-						<!-- Panel (Banner) -->
-							<section class="panel banner right">
-								<div class="content color0 span-3-75">
-									<h1 class="major">Hi, I am<br />
-									Karl Kaspar Haavel</h1>
-									<p>Data Scientist with a background in commodity trading, energy asset forecasting, 
-										risk management, computer vision, and time-series analysis. I build production
-										ML systems for forecasting, risk, and deep learning applications. 
-										If I am not coding, I am either reading sci-fi, conquering some games or traveling the globe.
-									</p>
 
-									 <!-- KISS (Keep it Simple Stupid) is my dogma.  -->
-									<!-- <p>//Home //Blog</p> -->
-									<!-- <ul class="actions">
-										<li><a href="#first" class="button primary color1 circle icon solid fa-angle-right">Next</a></li>
-									</ul> -->
-								</div>
-								<div class="image filtered span-1-75" data-position="0% 0%">
-									<img src="images/IMG_5391.png" alt="" />
-								</div>
-							</section>
+<nav data-toggled="false" data-transitionable="false">
+  <div id="nav-logo-section" class="nav-section">
+    <a href="index.html">
+      Kaspar Haavel
+    </a>
+  </div>
+  <div id="nav-mobile-section">
+    <div id="nav-link-section" class="nav-section">
+      <a href="index.html">ABOUT</a>
+      <a href="work.html">WORK</a>
+    </div>
+    <div id="nav-social-section" class="nav-section">
+      <a href="https://github.com/ka5par" target="_blank">
+        <i class="fa-brands fa-github"></i>
+      </a>
+	  <a href="https://linkedin.com/in/haavel" target="_blank">
+        <i class="fa-brands fa-linkedin"></i>
+      </a>
+	  	  <a href="mailto:kk@khaavel.com" target="_blank">
+        <i class="fa-solid fa-envelope"></i>
+      </a>
+    </div>
+    <div id="nav-contact-section" class="nav-section">
+      <a href="mailto:kk@haavel.com">GET IN TOUCH</a>
+    </div>
+  </div>
+  <button id="nav-toggle-button" type="button" onclick="handleNavToggle()">
+    <span>Menu</span>
+    <i class="fa-solid fa-bars"></i>
+  </button>
+</nav>
 
-						<!-- Panel -->
-							<section class="panel">
-								<div class="intro color1">
-									<h2 class="major">Projects done for companies in the past.</h2>
-									<p> Since 2020 </p>
-									<!-- These are in panels so 4 panels, put the company Logo's as well and tools-->
-									<!-- <p> Power Asset Forecasting - [Renewcast Srl] wind & solar power forecasting for various clients in the energy sector. (webpage to renewcast). </p> 
-									References: 
-									 	- https://renewcast.com/ 
-									Tools: 
-										- [PYTHON, AZURE, DOCKER, SPARK, MLFLOW, PYTORCH, NUMPY]
-										-->
-									
-									<!-- <p> Prometheus - [Proekspert, ESA/Ariane] Time-series anomaly detection - Engine anomaly detection during flight (Prometheus site, Site to proekspert blog) </p> 
-									References: 
-										-  
-									Tools:
-										- [PYTHON, KUBEFLOW, PYTORCH, NUMPY]
-									-->
-									<!-- <p> Thor [Proekspert for ESA/Solarstone ] - Computer Vision, Geoanalysis, Site to ESA project.
-									References: 
-										- Product: https://proekspert.com/satellite-based-house-roof-detection-and-measurement-solution-thor/
-										- Feasibility Study: https://business.esa.int/projects/roof-solar-panel-calculator
-									Tools: 
-										- [PYTHON, KUBEFLOW, PYTORCH, NUMPY, GEOPANDAS, SHAPELY, QGIS]
-									</p> -->
-									<!-- <p> Traffic Sign detection and localisation [Proekspert for Oslo] - Computer Vision, geoanalysis I worked on the classification part </p> -->
-								</div>
-								<div class="gallery">
-									<div class="group span-3">
-										<a href="images/gallery/fulls/01.jpg" class="image filtered span-3" data-position="bottom"><img src="images/gallery/thumbs/01.jpg" alt="" /></a>
-										<a href="images/gallery/fulls/02.jpg" class="image filtered span-1-5" data-position="center"><img src="images/gallery/thumbs/02.jpg" alt="" /></a>
-										<a href="images/gallery/fulls/03.jpg" class="image filtered span-1-5" data-position="bottom"><img src="images/gallery/thumbs/03.jpg" alt="" /></a>
-									</div>
-									<a href="images/gallery/fulls/04.jpg" class="image filtered span-2" data-position="top"><img src="images/gallery/thumbs/01.jpg" alt="" /></a>
-								</div>
-							</section>
-
-						<!-- Panel -->
-							<section class="panel color4-alt">
-								<div class="intro color4">
-									<h2 class="major">Get in touch!</h2>
-								</div>
-								<div class="inner columns divided">
-									<div class="span-1-5">
-										<ul class="contact-icons color1">
-											<li class="icon brands fa-github"><a href="#">github.com/ka5par</a></li>
-											<li class="icon brands fa-linkedin"><a href="#">linkedin.com/in/haavel</a></li>
-											<li class="icon solid fa-envelope"><a href="mailto:kk@haavel.com">karlkaspar@haavel.com</a>
-    									</li>
-										</ul>
-									</div>
-								</div>
-							</section>
-
-						<!-- Panel -->
-						<!-- Copyright -->
-							<div class="copyright">&copy; Karl Kaspar Haavel. Design: <a href="https://html5up.net">HTML5 UP</a>.</div>
-
-					</div>
-
-			</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
+<main>
+  <article data-index="0">
+    <div class="article-image-section article-section"></div>
+    <div class="article-description-section article-section">
+      <p>
+ 	<strong>Who</strong> — Data Scientist<br><br>
+  	<strong>Background</strong> — Computer vision, time-series analysis, commodity trading, energy asset forecasting, risk management<br><br>
+  	<strong>Description</strong> — I build production Machine Learning systems for forecasting, risk, and deep learning applications.
+  When I'm not coding, I'm reading sci-fi, conquering games, or traveling the globe.
+      </p>
+    </div>
+    <div class="article-title-section article-section">
+      <h2>Kaspar Haavel</h2>
+      <i class="fa-solid fa-plus-large"></i>
+    </div>
+    <div class="article-nav-section article-section">
+      <button class="article-nav-button" type="button" onclick="handleLeftClick()">
+        <a href="work.html">WORK <i class="fa-solid fa-arrow-right-long"></i></a>
+      </button>
+    </div>
+  </article>
+</main>
+</body>
 </html>
