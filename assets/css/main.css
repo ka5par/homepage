@@ -247,6 +247,7 @@ main > article > .article-nav-section > .article-nav-button {
 
 main > article > .article-nav-section > .article-nav-button:hover {
   background-color: rgba(255, 255, 255, 0.02);
+  color: var(--highlight-color);
 }
 
 main > article > .article-nav-section > .article-nav-button:nth-child(2) {
