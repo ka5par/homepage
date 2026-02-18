@@ -449,3 +449,35 @@ main > article .yt-link > i {
   content: "→ ";
   color: #888
 }
+
+.video-wrapper {
+  position: relative; /* establishes positioning context */
+  display: inline-block; /* shrink-wrap to video size */
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.video-wrapper video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.video-wrapper a.video-copyright {
+  position: absolute;
+  bottom: 5px;   
+  right: 5px; 
+  color: rgba(200, 200, 200, 0.8);
+  font-size: 14px;
+  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 2px 6px;
+  border-radius: 3px;
+}
+
+.video-wrapper a.video-copyright:hover {
+  color: #fff;
+}
+
