@@ -1,0 +1,328 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Work</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/fontawesome/css/brands.min.css"/>
+        <link rel="stylesheet" href="assets/fontawesome/css/solid.min.css"/>
+		<link rel="stylesheet" href="assets/fontawesome/css/light.min.css"/>
+        <link rel="stylesheet" href="assets/fontawesome/css/fontawesome.min.css"/>
+		<script src="assets/js/main.js"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+	</head>
+
+<nav data-toggled="false" data-transitionable="false">
+  <div id="nav-logo-section" class="nav-section">
+    <a href="index.html">
+      KASPAR HAAVEL
+    </a>
+  </div>
+  <div id="nav-mobile-section">
+    <div id="nav-link-section" class="nav-section">
+      <a href="index.html">ABOUT</a>
+      <a href="work.html">WORK</a>
+    </div>
+    <div id="nav-social-section" class="nav-section">
+      <a href="https://github.com/ka5par" target="_blank" class="tooltip">
+        <span class="tooltiptext">github.com/ka5par</span>
+        <i class="fa-brands fa-github"></i>
+      </a>
+	  <a href="https://linkedin.com/in/haavel" target="_blank" class="tooltip">
+        <span class="tooltiptext">linkedin.com/in/haavel</span>
+        <i class="fa-brands fa-linkedin"></i>
+      </a>
+      </a>
+	  	  <a href="mailto:kk@khaavel.com" target="_blank" class="tooltip">
+          <span class="tooltiptext">kk@haavel.com</span>
+        <i class="fa-solid fa-envelope"></i>
+      </a>
+    </div>
+    <div id="nav-contact-section" class="nav-section">
+      <a href="mailto:kk@haavel.com" class="tooltip">GET IN TOUCH  <span class="tooltiptext">kk@haavel.com</span></a>
+     
+    </div>
+  </div>
+  <button id="nav-toggle-button" type="button" onclick="handleNavToggle()">
+    <span>Menu</span>
+    <i class="fa-solid fa-bars"></i>
+  </button>
+</nav>
+
+<main>
+  <article data-index="0" data-status="active">
+    <div class="article-image-section article-section">
+    <video autoplay muted loop playsinline>
+      <source src="videos/wind-turbines_80pct_smooth_720p.mp4" type="video/mp4">
+    </video>
+    </div>
+    <div class="article-description-section article-section">
+      <p>
+        <strong>What</strong> — Power Asset Forecasting 
+        <br><br>
+        
+        <strong>Description</strong> — Time-series analysis. Wind & solar power forecasting mainly for balance market trading. 
+        Developed and implemented the ML life-cycle (data / training / models / inference / mlops) pipeline with the main emphasis on scalable & repeatable methodologies 
+        that could be applied globally with one of the best in market performance and many various sources of input data. 
+        <br><br>
+
+        <strong>Tools</strong>
+        <br>
+        <div class="tools-logos">
+            <a href="https://www.python.org" target="_blank" rel="noopener">
+                <img src="./images/gallery/logos/python.png" alt="Python">
+            </a>
+            <a href="https://azure.microsoft.com/en-us" target="_blank" rel="noopener">
+                <img src="./images/gallery/logos/azure.png" alt="Microsoft Azure">
+            </a>
+            <a href="https://docker.com" target="_blank" rel="noopener">
+                <img src="./images/gallery/logos/docker.png" alt="Docker">
+            </a>
+            <a href="https://spark.apache.org/" target="_blank" rel="noopener">
+                <img src="./images/gallery/logos/apache-spark.png" alt="Apache Spark">
+            </a>
+            <a href="https://mlflow.org/" target="_blank" rel="noopener">
+                <img src="./images/gallery/logos/mlflow.svg" alt="MLFlow">
+            </a>
+            <a href="https://pytorch.org/" target="_blank" rel="noopener">
+                <img src="./images/gallery/logos/pytorch.png" alt="PyTorch">
+            </a>
+            <a href="https://xarray.dev/" target="_blank" rel="noopener">
+                <img src="./images/gallery/logos/xarray.png" alt="Xarray">
+            </a>
+            <a href="https://numpy.org/" target="_blank" rel="noopener">
+                <img src="./images/gallery/logos/numpy.png" alt="Numpy">
+            </a>
+        <br>
+    </p>
+    </div>
+    </div>
+    <div class="article-title-section article-section">
+      <h2><a href="https://renewcast.com/">Renewcast Srl</a></h2>
+      <i class="fa-solid fa-plus-large"></i>
+    </div>
+    <div class="article-nav-section article-section">
+      <button class="article-nav-button" type="button" onclick="handleLeftClick()">
+        <i class="fa-solid fa-arrow-left-long"></i>
+      </button>
+      <button class="article-nav-button" type="button" onclick="handleRightClick()">
+        <i class="fa-solid fa-arrow-right-long"></i>
+      </button>
+    </div>
+  </article>
+  <article data-index="1" data-status="inactive">
+    <div class="article-image-section article-section">
+<div class="video-wrapper">
+  <video autoplay muted loop playsinline>
+    <source src="videos/ariane6_720p.mp4" type="video/mp4">
+  </video>
+      <a href="https://www.esa.int/" target="_blank" class="video-copyright">
+      © ESA
+    </a>
+    </div>
+    </div>
+    <div class="article-description-section article-section">
+      <p>
+        <strong>What</strong> — In-flight anomaly detection & localisation on edge AI.
+        <br><br>
+        <strong>Description</strong> — Time-series analysis, anomaly detection, open-set-classification. 
+        Designed and implemented a methodology for anomaly detection in-flight, using Transformers and tree-based models used for live telemetry & diagnosis. 
+        Inferencing in fractions of a second and being fully packaged for an edge device. 
+        <br>
+
+    <div class="references">
+        <strong>References</strong>
+        <ul>
+  <li>
+    <a href="https://project-enlighten.eu/">Enlighten</a>
+  </li>
+  <li>
+    <a href="https://proekspert.com/blog/bi-data-analytics/revolutionising-space-travel/">
+      Revolutionising space travel
+    </a>
+  </li>
+  <li>
+    <a href="https://proekspert.com/blog/bi-data-analytics/ariane-rocket-project-behind-the-scenes/">
+      Ariane Project Behind the Scenes
+    </a>
+  </li>
+</ul>
+</div>
+<br>
+        <strong>Tools</strong>
+        <br>
+        <div class="tools-logos">
+            <a href="https://www.python.org" target="_blank" rel="noopener">
+                <img src="./images/gallery/logos/python.png" alt="Python">
+            </a>
+            <a href="https://kubeflow.apache.org/" target="_blank" rel="noopener">
+                <img src="./images/gallery/logos/kubeflow.png" alt="Kubeflow">
+            </a>
+            <a href="https://docker.com" target="_blank" rel="noopener">
+                <img src="./images/gallery/logos/docker.png" alt="Docker">
+            </a>
+            <a href="https://pytorch.org/" target="_blank" rel="noopener">
+                <img src="./images/gallery/logos/pytorch.png" alt="PyTorch">
+            </a>
+            <a href="https://onnx.org/" target="_blank" rel="noopener">
+                <img src="./images/gallery/logos/onnx.png" alt="ONNX">
+            </a>
+            <a href="https://numpy.org/" target="_blank" rel="noopener">
+                <img src="./images/gallery/logos/numpy.png" alt="Numpy">
+            </a>
+        <br>
+        </div>
+    </p>
+    </div>
+    <div class="article-title-section article-section">
+        <h2><a href="https://project-enlighten.eu/">Project Enlighten</a></h2>
+      <i class="fa-solid fa-plus-large"></i>
+    </div>
+    <div class="article-nav-section article-section">
+      <button class="article-nav-button" type="button" onclick="handleLeftClick()">
+        <i class="fa-solid fa-arrow-left-long"></i>
+      </button>
+      <button class="article-nav-button" type="button" onclick="handleRightClick()">
+        <i class="fa-solid fa-arrow-right-long"></i>
+      </button>
+    </div>
+
+  </article>
+  <article data-index="2" data-status="inactive">    
+   <div class="article-image-section article-section">
+     <div class="image-wrapper">
+      <img src="images/gallery/fulls/Pleiades-Neo-Sample-data.jpg" alt="Pleiades Neo Sample Image">
+      <a href="https://www.airbus.com/en/products-services/defence" target="_blank" class="image-copyright">
+        © Copyright Airbus DS, France
+      </a>
+      </div>
+   </div>
+    <div class="article-description-section article-section">
+      <p>
+        <strong>What</strong> — Satellite based house roof detection and measurements.
+        <br><br>
+        <strong>Description</strong> — Computer Vision, Geospatial Data Analysis. Began with a feasibility study — designed, implemented, optimized for cost and scale data gathering & extraction methodologies
+for high-resolution satellite imagery, map data, and 3D models. Then based on the dataset designed and integrated an e2e ML pipeline for hierarhical ML to detect buildings, 
+their roof sides, and roof-side angles (azimuth, tilt). Later converted into a batch inference workflow using only satellite imagery as inputs. 
+        <br>
+
+    <div class="references">
+        <strong>References</strong>
+        <ul>
+  <li>
+    <a href="https://business.esa.int/projects/roof-solar-panel-calculator">Feasability Study</a>
+  </li>
+  <li>
+    <a href="https://proekspert.com/satellite-based-house-roof-detection-and-measurement-solution-thor/">
+      Project THOR
+    </a>
+  </li>
+  <li><a href="https://app.solarstone.com/plan">
+      Demo
+    </a>
+</li>
+</ul>
+</div>
+<br>
+        <strong>Tools</strong>
+        <br>
+        <div class="tools-logos">
+            <a href="https://www.python.org" target="_blank" rel="noopener">
+                <img src="./images/gallery/logos/python.png" alt="Python">
+            </a>
+            <a href="https://kubeflow.apache.org/" target="_blank" rel="noopener">
+                <img src="./images/gallery/logos/kubeflow.png" alt="Kubeflow">
+            </a>
+            <a href="https://docker.com" target="_blank" rel="noopener">
+                <img src="./images/gallery/logos/docker.png" alt="Docker">
+            </a>
+            <a href="https://pytorch.org/" target="_blank" rel="noopener">
+                <img src="./images/gallery/logos/pytorch.png" alt="PyTorch">
+            </a>
+            <a href="https://numpy.org/" target="_blank" rel="noopener">
+                <img src="./images/gallery/logos/numpy.png" alt="Numpy">
+            </a>
+            <a href="https://geopandas.org/en/stable/" target="_blank" rel="noopener">
+                <img src="./images/gallery/logos/geopandas.png" alt="Geopandas">
+            </a>
+            <a href="https://www.cityjson.org/"  target="_blank" rel="noopener"><img src="./images/gallery/logos/cityjson.png" alt="CitiJSON"></a>
+        <br>
+        </div>
+    </p>
+    </div>
+    <div class="article-title-section article-section">
+        <h2><a href="https://proekspert.com/satellite-based-house-roof-detection-and-measurement-solution-thor/">Thor</a></h2>
+      <i class="fa-solid fa-plus-large"></i>
+    </div>
+    <div class="article-nav-section article-section">
+      <button class="article-nav-button" type="button" onclick="handleLeftClick()">
+        <i class="fa-solid fa-arrow-left-long"></i>
+      </button>
+      <button class="article-nav-button" type="button" onclick="handleRightClick()">
+        <i class="fa-solid fa-arrow-right-long"></i>
+      </button>
+    </div>
+  </article>
+  <article data-index="3" data-status="inactive">    
+   <div class="article-image-section article-section">
+     <div class="image-wrapper">
+      <img src="images/gallery/fulls/crossing.jpg" alt="Example traffic sign">
+      </div>
+
+   </div>
+    <div class="article-description-section article-section">
+      <p>
+        <strong>What</strong> — Traffic Sign Detection and Localisation.
+        <br><br>
+        <strong>Description</strong> — Computer Vision (Object Detection, Classification, Object Tracking), Geospatial Data Analysis. Developed and integrated object detection, classification and labeling tools in order to pre-label/predict 
+traffic signs. In order to reduce costs of manually detecting & localizing & classifing traffic signs. 
+        <br>
+
+    <div class="references">
+        <strong>References</strong>
+        <ul>
+  <li>
+    <a href="https://proekspert.com/ai-driven-innovation-automation/#:~:text=smart%20city%20analytics-,Client,Streamlined%20annotation%20for%20Oslo%2C%20scalable%20to%20new%20cities/countries.,-AI%2Dassessment%20workshop">Proekspert Case Study: AI for traffic sign recognition and smart city analytics</a>
+  </li>
+</ul>
+</div>
+<br>
+        <strong>Tools</strong>
+        <br>
+        <div class="tools-logos">
+            <a href="https://www.python.org" target="_blank" rel="noopener">
+                <img src="./images/gallery/logos/python.png" alt="Python">
+            </a>
+            <a href="https://pytorch.org/" target="_blank" rel="noopener">
+                <img src="./images/gallery/logos/pytorch.png" alt="PyTorch">
+            </a>
+            <a href="https://www.cvat.ai/" target="_blank" rel="noopener">
+                <img src="./images/gallery/logos/cvat.svg" alt="CVAT">
+            </a>
+            <a href="https://docs.voxel51.com/" target="_blank" rel="noopener">
+                <img src="./images/gallery/logos/fiftyone.png" alt="FiftyOne">
+            </a>
+        <br>
+        </div>
+    </p>
+    </div>
+    <div class="article-title-section article-section">
+        <h2>Smart City Project for Oslo</h2>
+      <i class="fa-solid fa-plus-large"></i>
+    </div>
+    <div class="article-nav-section article-section">
+      <button class="article-nav-button" type="button" onclick="handleLeftClick()">
+        <i class="fa-solid fa-arrow-left-long"></i>
+      </button>
+      <button class="article-nav-button" type="button" onclick="handleRightClick()">
+        <i class="fa-solid fa-arrow-right-long"></i>
+      </button>
+    </div>
+  </article>
+</main>
+</body>
+</html>
