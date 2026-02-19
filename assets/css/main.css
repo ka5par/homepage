@@ -115,6 +115,7 @@ main {
   flex-grow: 1;
   position: relative;
   overflow: hidden;
+  min-height: 70vh; /* reserve viewport space to reduce CLS when media loads */
 }
 
 main > article {
@@ -122,11 +123,12 @@ main > article {
   width: 100%;
   display: grid;
   grid-template-columns: 2fr 1fr;
-  grid-template-rows: 2fr 1fr;
+  grid-template-rows: minmax(300px, 2fr) minmax(200px, 1fr);
   position: absolute;
   left: 0px;
   top: 0px;
   transition: transform 400ms ease;  
+  overflow: hidden; /* prevent content spillover during resize */
 }
 
 main > article[data-status="inactive"] {
@@ -159,11 +161,13 @@ main > article[data-status="becoming-active-from-after"] {
 main > article > .article-section {
   height: 100%;
   display: flex;
+  overflow: hidden; /* prevent content spillover during resize */
 }
 
 main > article > .article-description-section,
 main > article > .article-nav-section {
   border-left: 1px solid var(--border-color);
+  overflow: hidden; /* prevent overflow during resize */
 }
 
 main > article > .article-title-section,
@@ -174,6 +178,12 @@ main > article > .article-nav-section {
 
 .article-image-section {
   overflow: hidden;
+  /* Reserve a consistent media box so images/videos don't change the grid shape */
+  aspect-ratio: 16 / 9;
+  min-height: 360px;          /* reasonable minimum for desktop */
+  max-height: 70vh;          /* won't exceed most viewports */
+  width: 100%;
+  display: block;
 }
 
 .article-image-section img {
@@ -194,6 +204,9 @@ main > article > .article-description-section {
   flex-direction: column;
   justify-content: flex-end;
   padding: 4rem; 
+  min-height: 220px; /* reserve vertical space for text to avoid CLS */
+  overflow-y: auto; /* allow scrolling if content overflows */
+  max-height: 100%; /* prevent overflow */
 }
 
 main > article > .article-description-section > p {
@@ -209,6 +222,8 @@ main > article > .article-title-section {
   align-items: center; 
   justify-content: space-between;
   padding: 2rem 4rem;
+  min-height: 120px; /* keep title area stable between slides */
+  overflow: hidden; /* prevent overflow during resize */
 }
 
 main > article > .article-title-section * {
@@ -268,8 +283,9 @@ main > article > .article-nav-section > .article-nav-button:nth-child(2) {
   
   main > article {
     grid-template-columns: none;
-    grid-template-rows: 1.5fr repeat(3, 0.75fr) 0.25fr;
-    height: max(900px, 100%);
+    grid-template-rows: minmax(300px, 1.5fr) minmax(200px, 0.75fr) minmax(150px, 0.75fr) minmax(100px, 0.25fr);
+    height: max(800px, 100%);
+    overflow: hidden; /* prevent content spillover during resize */
   }
    
   main > article > .article-title-section > h2 {
