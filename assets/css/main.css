@@ -345,6 +345,7 @@ main > article > .article-nav-section > .article-nav-button:nth-child(2) {
   main {
     overflow-y: auto;
     overflow-x: hidden;
+    overscroll-behavior-y: contain;
   }
   nav {
     justify-content: space-between;  
@@ -412,6 +413,7 @@ main > article > .article-nav-section > .article-nav-button:nth-child(2) {
     top: 0;
     height: auto;
     overflow-y: auto;
+    scroll-snap-align: none;
   }
   
   main > article > .article-title-section {
