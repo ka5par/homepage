@@ -161,7 +161,6 @@ main > article[data-status="becoming-active-from-after"] {
 main > article > .article-section {
   height: 100%;
   display: flex;
-  overflow: hidden; /* prevent content spillover during resize */
 }
 
 main > article > .article-description-section,
@@ -204,9 +203,9 @@ main > article > .article-description-section {
   flex-direction: column;
   justify-content: flex-end;
   padding: 4rem; 
-  min-height: 220px; /* reserve vertical space for text to avoid CLS */
-  overflow-y: auto; /* allow scrolling if content overflows */
-  max-height: 100%; /* prevent overflow */
+  min-height: 220px;
+  overflow-y: auto;
+  max-height: 100%;
 }
 
 main > article > .article-description-section > p {
@@ -322,7 +321,11 @@ main > article > .article-nav-section > .article-nav-button:nth-child(2) {
   }
 }
 
-@media(max-width: 800px) {  
+@media(max-width: 1200px) {  
+  main {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
   nav {
     justify-content: space-between;  
   }
@@ -381,8 +384,13 @@ main > article > .article-nav-section > .article-nav-button:nth-child(2) {
   }
   
   main > article {
-    grid-template-rows: 1fr repeat(4, 0.5fr);
+    /* grid-template-rows: 1fr repeat(4, 0.5fr); */
+    grid-template-rows: auto auto auto auto;
     height: max(700px, 100%);
+    display: grid;
+    min-height: 100vh;
+    top: 0;
+    height: auto;
   }
   
   main > article > .article-title-section {
@@ -405,6 +413,23 @@ main > article > .article-nav-section > .article-nav-button:nth-child(2) {
   
   main > article > .article-description-section > p {
     font-size: 1rem;
+  }
+
+  main > article > .article-nav-section {
+    flex-grow: 0;
+    flex-shrink: 0;
+    min-height: 5rem; /* minimum vertical tap target area */
+    position: sticky;
+    bottom: 0;
+    background-color: var(--background-color); /* match page bg to hide overlap */
+    border-top: 1px solid var(--border-color);
+  }
+
+    main > article > .article-nav-section > .article-nav-button {
+    font-size: 2.5rem;
+    padding: 0.75rem;
+    min-width: 5rem;
+    min-height: 5rem;
   }
 }
 
@@ -557,4 +582,16 @@ main > article .yt-link > i {
 .tooltip:hover .tooltiptext {
   visibility: visible;
   opacity: 1;
+}
+
+
+.article-description-section::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1.5rem;
+  background: linear-gradient(to bottom, transparent, var(--background-color));
+  pointer-events: none;
 }
