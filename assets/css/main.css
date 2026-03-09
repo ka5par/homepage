@@ -305,7 +305,6 @@ main > article > .article-nav-section > .article-nav-button:nth-child(2) {
     grid-template-columns: none;
     grid-template-rows: minmax(300px, 1.5fr) minmax(200px, 0.75fr) minmax(150px, 0.75fr) minmax(100px, 0.25fr);
     height: max(800px, 100%);
-    overflow: hidden; /* prevent content spillover during resize */
   }
    
   main > article > .article-title-section > h2 {
@@ -412,6 +411,7 @@ main > article > .article-nav-section > .article-nav-button:nth-child(2) {
     min-height: 100vh;
     top: 0;
     height: auto;
+    overflow-y: auto;
   }
   
   main > article > .article-title-section {
@@ -446,7 +446,7 @@ main > article > .article-nav-section > .article-nav-button:nth-child(2) {
     border-top: 1px solid var(--border-color);
   }
 
-    main > article > .article-nav-section > .article-nav-button {
+  main > article > .article-nav-section > .article-nav-button {
     font-size: 2.5rem;
     padding: 0.75rem;
     min-width: 5rem;
