@@ -208,6 +208,27 @@ main > article > .article-description-section {
   max-height: 100%;
 }
 
+@media (min-width:1201px) {
+    main > article {
+    /* Constrain the description row to match the cap */
+    grid-template-rows: minmax(300px, 2fr) minmax(120px, 0.75fr);
+  }
+
+
+  main > article > .article-description-section{
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 4rem;
+
+  /* 🔧 NEW: make it scrollable when content overflows */
+  max-height: 100vh; /* cap height; adjust as needed */
+  overflow-y: auto;
+  overflow-x: hidden;
+  align-items: flex-start; /* start from top */
+}}
+
+
+
 main > article > .article-description-section > p {
   color: rgba(255, 255, 255, 0.5);
   font-size: 1.25em;
